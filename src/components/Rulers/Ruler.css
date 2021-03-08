@@ -1,0 +1,24 @@
+.ruler {
+  position: sticky;
+  width: 100%;
+  z-index: 999;
+  cursor: none;
+}
+
+.grey-bar {
+  background: rgb(187 187 187 / 25%);
+  cursor: none;
+  position: fixed;
+}
+
+.underline {
+  background: rgb(0, 0, 0);
+  cursor: none;
+  position: fixed;
+}
+
+.lightbox,
+.shade {
+  background: rgb(187 187 187 / 25%);
+  cursor: none;
+}
