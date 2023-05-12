@@ -40,11 +40,13 @@ function App() {
 
   useEffect(() => {
     if (shiftKey) {
+       // @ts-ignore
       setRuler(null);
     }
   }, [shiftKey, ruler]);
 
   useEffect(() => {
+    // @ts-ignore
     switch (selected.anchorKey) {
       case "Grey Bar":
         setRuler("grey-bar");
@@ -65,6 +67,7 @@ function App() {
 
   useEffect(() => {
     window.addEventListener("shift", (event) => {
+      // @ts-ignore
       setRuler(null);
     });
   }, []);
@@ -73,6 +76,7 @@ function App() {
     <div
       className='App'
       onMouseMove={() => {
+        // @ts-ignore
         ruler !== null ? cursorChangeHandler(ruler) : cursorChangeHandler(null);
       }}
     >
@@ -104,6 +108,7 @@ function App() {
               <Menu
                 selectionMode='single'
                 selectedKeys={selected}
+                // @ts-ignore
                 onSelectionChange={setSelected}
                 items={menuItems}
               >

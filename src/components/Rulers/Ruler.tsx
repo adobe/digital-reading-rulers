@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import React, { useContext } from "react";
+import { useContext } from "react";
 import "./Ruler.css";
 import useMousePosition from "../../hooks/useMousePosition";
 import { MouseContext } from "../../context/mouse-context";
@@ -27,6 +27,7 @@ const Ruler = () => {
 
   const getRulerHeight = () => {
     if (cursorType === "lightbox" || cursorType === "shade") {
+      // @ts-ignore
       return y + 14;
     } else if (cursorType === "underline") {
       return 2;
@@ -44,7 +45,9 @@ const Ruler = () => {
             left: "0",
             top: cursorType === "shade" ? "0" : `${y}px`,
             height: getRulerHeight() + "px",
+            // @ts-ignore
             position: cursorType === "shade" && "fixed",
+            // @ts-ignore
             bottom: cursorType === "shade" && getRulerHeight() - 100 + "px",
           }}
         ></div>

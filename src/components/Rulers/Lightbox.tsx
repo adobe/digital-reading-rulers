@@ -10,7 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import React from "react";
 import "./Ruler.css";
 import useMousePosition from "../../hooks/useMousePosition";
 
@@ -24,6 +23,7 @@ const Lightbox = () => {
         style={{
           left: "0",
           top: "0",
+          // @ts-ignore
           height: y - 14 + "px",
           position: "fixed",
         }}
@@ -32,6 +32,7 @@ const Lightbox = () => {
         className='ruler lightbox'
         style={{
           left: "0",
+          // @ts-ignore
           top: y + 14 + "px",
           right: "0",
           bottom: "0",
